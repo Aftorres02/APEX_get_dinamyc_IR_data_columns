@@ -33,7 +33,7 @@ The result is to have download_300_cols_gtt with the same information that the u
 
 - ` p_remove_html_from_header ` if you want to print the header, it could contains html like ` <br>, <b>, etc `, if you want to remove it, set it as ` true  `
 
-```sql
+``` sql
   procedure get_report_data_into_gtt(
       p_app_id                        in apex_application_page_regions.application_id%type
     , p_page_id                       in apex_application_page_regions.page_id%type
@@ -56,18 +56,10 @@ The result is to have download_300_cols_gtt with the same information that the u
 #### Params:
 
   - ` p_filename ` name of the file to download.
+
   - ` p_exclude_columns_tbl ` Contains the number of the column or columns that you don't want to download.
 
-
-#### Params:
-
-- ` p_pk_column_name ` look in the current query the column with the primary key, and store the column into ` apex_ir_util.g_pk_column `
-
-- ` p_add_headers ` is a boolean, used to add into the report the Header labels of the IR
-
-- ` p_remove_html_from_header ` if you want to print the header, it could contains html like ` <br>, <b>, etc `, if you want to remove it, set it as ` true  `
-
-```sql
+``` sql
   procedure download(
       p_filename                       in varchar2
     , p_mime_header                    in varchar2 default 'text/csv'
